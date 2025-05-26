@@ -1,11 +1,12 @@
 Alunos: Pedro Dallanora, Pedro Felix, Felipe Kureski, Felipe Schneider e Felipe Martins
 
-#Estrutura do Aplicativo
-##1. Modelagem de Dados
+Estrutura do Aplicativo
+1. Modelagem de Dados
+
 A estrutura ObraDeArte representa cada obra na galeria, contendo propriedades como
 título, artista, ano, estilo, nome da imagem e descriçã o. Cada obra é identificada de forma
 ú nica com um UUID, garantindo controle individual no uso com LazyVGrid e navegaçã o.
-2. Gerenciamento de Estado
+3. Gerenciamento de Estado
 Adotou-se o padrã o MVVM com o uso do GaleriaViewModel, que gerencia:
 -
 A lista completa de obras.
@@ -15,17 +16,17 @@ O texto de pesquisa digitado pelo usuá rio.
 A filtragem das obras exibidas com base na busca por título ou artista.
 A atualizaçã o da interface ocorre reativamente com o uso de @Published, @StateObject e
 @EnvironmentObject.
-3. Interface e Layout
+4. Interface e Layout
 A interface principal utiliza LazyVGrid com colunas adaptá veis definidas por
 GridItem(.adaptive(...)). O nú mero de colunas se ajusta automaticamente conforme o
 tamanho da tela, oferecendo suporte a iPhones e iPads. O layout conta com espaçamentos,
 sombras e cantos arredondados para melhor legibilidade e estética.
-4. Navegação e Detalhamento
+5. Navegação e Detalhamento
 A navegaçã o entre as telas é feita com NavigationStack, que garante compatibilidade
 adequada para dispositivos maiores como o iPad. Ao selecionar uma obra, o usuá rio é
 redirecionado à tela de detalhes, onde sã o apresentados todos os dados relevantes da obra
 de arte em um layout vertical com foco em clareza e organizaçã o.
-5. Recursos Extras
+6. Recursos Extras
 -
 Animaçõ es suaves ao tocar em uma obra ou ao transitar entre telas.
 -
